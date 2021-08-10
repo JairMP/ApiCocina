@@ -12,6 +12,6 @@ class Add_Recipe(Resource):
         recipe = Recipe(
             title = data['title']
         )
-        #recipe.save()
+        recipe.save()
         resp = recipe_schema.dump(recipe)
         return {"recipe": resp }
